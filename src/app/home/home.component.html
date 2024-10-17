@@ -1,0 +1,17 @@
+<div class="container" *ngIf="!errMessage">
+  <div class="row">
+    <div class="col text-center">
+      <h1>Preferiti: {{ favoriti }}</h1>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-4 row-cols-lg-6 g-3">
+    <div class="col" *ngFor="let photo of photoArr">
+      <app-card [image]="photo"></app-card>
+    </div>
+  </div>
+  <button (click)="log()">consolelog</button>
+</div>
+
+<div *ngIf="errMessage">
+  <p class="alert alert-danger">{{ errMessage }}</p>
+</div>

@@ -1,0 +1,15 @@
+<div class="card">
+  <img
+    [src]="image.thumbnailUrl"
+    class="card-img-top"
+    alt="image placeholder"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ image.title }}</h5>
+
+    <button (click)="addToFav()" class="btn btn-primary">
+      Add to preferiti
+    </button>
+    <button (click)="delete(image)" class="btn btn-danger">Delete</button>
+  </div>
+</div>
